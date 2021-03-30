@@ -50,7 +50,7 @@ img {
 
 .top-container {
     background-color: deepskyblue;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -64,13 +64,17 @@ img {
     padding: 50px 0 20px;
 }
 
-.skill-row {
-    width: 50%;
-    margin: 100px auto;
-    overflow: auto;
-    text-align: left;
-    display: flex;
-    align-items: center;
+.h1-abhijith-text-style {
+    margin: 0;
+    padding-top: 100px;
+}
+
+.h2-programmer-text-style {
+    margin: 20px;
+}
+
+.h2-pro-text-style {
+    text-decoration: underline;
 }
 
 .mountain {
@@ -94,34 +98,28 @@ img {
     left: 250px;
 }
 
-.computer-img {
-    width: 30%;
-    /* float: left; */
-    margin-right: 100px;
-}
-
-.mini-militia-img {
-    width: 30%;
-    float: right;
-    margin-left: 30px;
-}
-
-.h1-abhijith-text-style {
-    margin: 0;
-    padding-top: 100px;
-}
-
-.h2-programmer-text-style {
-    margin: 20px;
-}
-
-.h2-pro-text-style {
-    text-decoration: underline;
-}
-
 .intro-text {
     width: 25%;
     margin: auto;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.skill-row:nth-child(even) .skill-img {
+    order: 2;
+}
+
+.skill-img {
+    width: 30%;
+    min-width: 170px;
 }
 
 .contact-message {
@@ -137,7 +135,6 @@ img {
 }
 
 .btn {
-    background: deepskyblue;
     background-image: -webkit-linear-gradient(top, deepskyblue, rgb(4, 159, 211));
     background-image: -moz-linear-gradient(top, deepskyblue, rgb(4, 159, 211));
     background-image: -ms-linear-gradient(top, deepskyblue, rgb(4, 159, 211));
@@ -152,14 +149,56 @@ img {
     padding: 10px 20px 10px 20px;
     margin: 20px auto 0px auto;
     text-decoration: none;
-  }
+}
   
-  .btn:hover {
-    background: deepskyblue;
-    background-image: -webkit-linear-gradient(top, rgb(82, 208, 250), rgb(67, 171, 206));
-    background-image: -moz-linear-gradient(top, rgb(82, 208, 250), rgb(67, 171, 206));
-    background-image: -ms-linear-gradient(top, rgb(82, 208, 250), rgb(67, 171, 206));
-    background-image: -o-linear-gradient(top, rgb(82, 208, 250), rgb(67, 171, 206));
-    background-image: linear-gradient(to bottom, rgb(82, 208, 250), rgb(67, 171, 206));
-    text-decoration: none;
-  }
+.btn:hover {
+    opacity: .8;
+}
+
+
+@media (max-width: 800px) {
+    .intro-text {
+        width: 50%;
+    }
+    
+    .skill-row {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .h1-abhijith-text-style {
+        font-size: 4em;
+        padding: 50px 15px 0;
+    }
+
+    .h2-programmer-text-style {
+        font-size: 1.5rem;
+    }
+
+    .top-cloud, .bottom-cloud {
+        display: none;
+    }
+
+    .intro-text {
+        width: 50%;
+    }
+
+    .skill-row {
+    width: 70%;
+    margin: 100px auto;
+    display: block;
+    text-align: center;
+    }
+
+    .skill-img {
+        width: 207px;
+    }
+}
+
+@media (max-width: 400px) {    
+    .intro-text, .contact-message {
+        width: 70%;
+    }
+}
+
